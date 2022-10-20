@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wordle"
+version = "0.1.0"
+description = ""
+authors = ["Catherine Devlin <catherine.devlin@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+jupyterlab = "^3.4.8"
+mypy = "^0.982"
+black = "^22.10.0"
+vulture = "^2.6"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+wordle = 'wordle.wordle:play'
