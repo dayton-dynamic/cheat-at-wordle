@@ -1,8 +1,8 @@
-from typing import Optional, Iterator, List
-from enum import Enum
-from pathlib import Path
 import random
 from collections import deque
+from enum import Enum
+from pathlib import Path
+from typing import Iterator, List, Optional
 
 LEN = 5
 N_SUGGESTIONS = 6
@@ -18,11 +18,6 @@ class Letter:
     def __init__(self):
         self.answer: Optional[str] = None
         self.cannot_be: set(str) = set()
-
-    def guess(self, letter: str, result: GuessResult) -> None:
-        match result:
-            case GuessResult.GREEN:
-                answer = letter
 
     def good_guess(self, letter: str) -> bool:
         if self.answer:
